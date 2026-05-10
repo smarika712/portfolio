@@ -13,3 +13,8 @@ To update exit project
 - git add .
 - git commit -m ""
 - git push origin main 
+
+
+To clone or downlaod project
+- git clone link
+
