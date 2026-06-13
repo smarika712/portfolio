@@ -1,147 +1,827 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Smarika Thapa Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smarika Thapa — Professional Portfolio. Creative problem-solver dedicated to delivering impactful work." />
+  <title>Smarika Thapa | Portfolio</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+<body>
 
-<body class="index-page">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">S.Thapa</a>
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Smarika</h1>
-      </a>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/cv.html">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="header-social-links d-none d-lg-flex">
+        <a href="https://x.com/taelisa0397" target="_blank" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/smarika.thapa.magar.391178/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/s_marika712/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/smarika-thapa-970966319/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+<!-- ===== HERO ===== -->
+<section id="home" class="hero-section">
+  <div class="hero-bg-orb hero-bg-orb-1"></div>
+  <div class="hero-bg-orb hero-bg-orb-2"></div>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <div class="hero-badge fade-up">
+          <span class="dot"></span>
+          Available for Opportunities
+        </div>
+
+        <h1 class="hero-title fade-up">
+          Hi, I'm <span class="gradient-text">Smarika<br>Thapa</span>
+        </h1>
+
+        <div class="hero-typewriter fade-up">
+          <span class="typed-role" data-roles='["Web Developer","UI/UX Designer","Creative Professional","Digital Strategist","Problem Solver"]'></span><span style="color:var(--clr-accent);opacity:0.7">|</span>
+        </div>
+
+        <p class="hero-description fade-up">
+          A passionate professional dedicated to crafting meaningful digital experiences. I blend creativity with technical expertise to deliver solutions that make a real impact.
+        </p>
+
+        <div class="hero-stats fade-up">
+          <div class="hero-stat-item">
+            <div class="hero-stat-number" data-target="10" data-suffix="+">0+</div>
+            <div class="hero-stat-label">Projects Done</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-number" data-target="3" data-suffix="+">0+</div>
+            <div class="hero-stat-label">Years Exp.</div>
+          </div>
+
+        <div class="hero-actions fade-up">
+          <a href="#projects" class="btn-primary-custom">
+            <i class="bi bi-grid-3x3-gap"></i> View My Work
+          </a>
+          <a href="pages/cv.html" class="btn-outline-custom">
+            <i class="bi bi-file-earmark-person"></i> Download CV
+          </a>
+        </div>
       </div>
 
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="hero-image-wrap">
+          <div class="hero-avatar-ring">
+            <div class="hero-avatar-placeholder" aria-label="Smarika Thapa">ST</div>
+          </div>
+          <div class="hero-floating-card" style="bottom:30px;left:-40px;">
+            <div class="floating-card-label"><i class="bi bi-check-circle-fill text-success me-1"></i> Available</div>
+            <div class="floating-card-value">For Hire</div>
+          </div>
+          <div class="hero-floating-card" style="top:30px;right:-30px;">
+            <div class="floating-card-label">⭐ Rating</div>
+            <div class="floating-card-value">5.0 / 5.0</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main class="main">
+<!-- ===== SKILLS TICKER ===== -->
+<div class="skills-ticker-section">
+  <div class="ticker-wrap">
+    <span class="ticker-item"><i class="bi bi-code-slash"></i> HTML / CSS</span>
+    <span class="ticker-item"><i class="bi bi-filetype-js"></i> JavaScript</span>
+    <span class="ticker-item"><i class="bi bi-bootstrap"></i> Bootstrap</span>
+    <span class="ticker-item"><i class="bi bi-palette"></i> UI/UX Design</span>
+    <span class="ticker-item"><i class="bi bi-wordpress"></i> WordPress</span>
+    <span class="ticker-item"><i class="bi bi-graph-up"></i> Digital Marketing</span>
+    <span class="ticker-item"><i class="bi bi-camera"></i> Photography</span>
+    <span class="ticker-item"><i class="bi bi-file-earmark-text"></i> Content Writing</span>
+    <span class="ticker-item"><i class="bi bi-phone"></i> Mobile-First Design</span>
+    <span class="ticker-item"><i class="bi bi-git"></i> Git & GitHub</span>
+    <span class="ticker-item"><i class="bi bi-figma"></i> Figma</span>
+    <span class="ticker-item"><i class="bi bi-database"></i> SQL / MySQL</span>
+  </div>
+</div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2>Smarika Thapa Adams</h2>
-            <p>I'm a professional illustrator from San Francisco</p>
-            <a href="about.html" class="btn-get-started">About Me</a>
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5 fade-left">
+        <div class="about-image-wrap">
+          <div class="about-img-placeholder">
+            <img src="assets/img/image.jpeg" alt="Smarika Thapa">
+          </div>
+          <div class="about-experience-badge">
+            <div class="exp-num">5+</div>
+            <div class="exp-label">Years of<br>Experience</div>
           </div>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+      <div class="col-lg-7 fade-right">
+        <div class="section-badge"><i class="bi bi-person-circle"></i> About Me</div>
+        <h2 class="section-title">Passionate About <span>Creating Impact</span></h2>
+        <p style="color:var(--clr-text-muted);font-size:1rem;line-height:1.85;margin-bottom:1rem;">
+          I'm a versatile professional with a passion for turning ideas into reality. Whether designing intuitive interfaces, crafting compelling content, or developing robust web solutions — I bring creativity and precision to every project.
+        </p>
+        <p style="color:var(--clr-text-muted);font-size:1rem;line-height:1.85;margin-bottom:1.5rem;">
+          Based in Kathmandu, Nepal, I've worked with clients and teams across diverse industries, always focused on delivering work that exceeds expectations and creates lasting value.
+        </p>
 
-  </main>
+        <div class="about-info-grid">
+          <div class="about-info-item">
+            <div class="about-info-label">Name</div>
+            <div class="about-info-value">Smarika Thapa</div>
+          </div>
+          <div class="about-info-item">
+            <div class="about-info-label">Location</div>
+            <div class="about-info-value">Kathmandu, Nepal</div>
+          </div>
+          <div class="about-info-item">
+            <div class="about-info-label">LinkedIn</div>
+            <div class="about-info-value"><a href="https://www.linkedin.com/in/smarika-thapa-970966319/" target="_blank" style="color:var(--clr-accent);">smarika-thapa</a></div>
+          </div>
+          <div class="about-info-item">
+            <div class="about-info-label">Status</div>
+            <div class="about-info-value" style="color:var(--clr-accent-2);">✅ Available</div>
+          </div>
+        </div>
 
-  <footer id="footer" class="footer light-background">
+        <!-- Skill Bars -->
+        <div class="mt-1">
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">HTML</span>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="100"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">CSS</span>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="100"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Python</span>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="100"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">JavaScript</span>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="100"></div></div>
+          </div>
+        </div>
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Smarika Thapa</strong> <span>All Rights Reserved<br></span></p>
+        <div class="d-flex gap-3 mt-4 flex-wrap">
+          <a href="#contact" class="btn-primary-custom"><i class="bi bi-chat-dots"></i> Let's Talk</a>
+          <a href="pages/cv.html" class="btn-outline-custom"><i class="bi bi-download"></i> Download CV</a>
+        </div>
       </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COUNTER ===== -->
+<!-- <div class="section-alt">
+  <div class="container counter-section">
+    <div class="row g-4">
+      <div class="col-6 col-md-3 fade-up">
+        <div class="counter-card">
+          <div class="counter-number" data-target="50" data-suffix="+">50+</div>
+          <div class="counter-label">Projects Completed</div>
+        </div>
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+      <div class="col-6 col-md-3 fade-up">
+        <div class="counter-card">
+          <div class="counter-number" data-target="30" data-suffix="+">30+</div>
+          <div class="counter-label">Happy Clients</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 fade-up">
+        <div class="counter-card">
+          <div class="counter-number" data-target="5" data-suffix="+">5+</div>
+          <div class="counter-label">Years Experience</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 fade-up">
+        <div class="counter-card">
+          <div class="counter-number" data-target="15" data-suffix="+">15+</div>
+          <div class="counter-label">Awards Won</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-badge mx-auto"><i class="bi bi-stars"></i> What I Do</div>
+      <h2 class="section-title">Services I <span>Provide</span></h2>
+      <p class="section-subtitle mx-auto text-center">Comprehensive solutions tailored to your unique needs and goals.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-code-slash"></i></div>
+          <h5>Web Development</h5>
+          <p>Building responsive, high-performance websites and web applications using modern technologies and best practices.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-palette2"></i></div>
+          <h5>UI/UX Design</h5>
+          <p>Crafting intuitive user interfaces and engaging experiences that delight users and drive conversions.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-megaphone"></i></div>
+          <h5>Digital Marketing</h5>
+          <p>Strategic online marketing solutions including SEO, social media, and content marketing to grow your brand.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-pencil-square"></i></div>
+          <h5>Content Creation</h5>
+          <p>Compelling content that tells your story, engages your audience, and drives meaningful action.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-phone"></i></div>
+          <h5>Mobile-First Design</h5>
+          <p>Designing for every screen size from the ground up, ensuring flawless experiences on all devices.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-lightbulb"></i></div>
+          <h5>Brand Strategy</h5>
+          <p>Building cohesive brand identities that resonate with target audiences and stand out in competitive markets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="section section-alt">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <div class="section-badge"><i class="bi bi-briefcase"></i> Work History</div>
+        <h2 class="section-title">My <span>Experience</span></h2>
+        <p class="section-subtitle">A journey of growth, challenges, and meaningful contributions across diverse roles and industries.</p>
+
+        <div class="mt-4 pt-2">
+          <div class="section-badge" style="background:rgba(0,212,170,0.1);border-color:rgba(0,212,170,0.3);color:var(--clr-accent-2);">
+            <i class="bi bi-mortarboard"></i> Education
+          </div>
+          <div class="mt-3">
+            <div class="education-card mb-3">
+              <div class="education-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <div>
+                <div class="education-degree">Bachelor's Degree</div>
+                <div class="education-school">Prithvi Narayan campus, Nepal</div>
+                <div class="education-year">Undergraduate (2023 – 2028)</div>
+              </div>
+            </div>
+            <div class="education-card mb-3">
+              <div class="education-icon"><i class="bi bi-award"></i></div>
+              <div>
+                <div class="education-degree">+2</div>
+                <div class="education-school">Kathmandu Bernhardt College / Computer Science</div>
+                <div class="education-year">2021-2022</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="timeline">
+          <div class="timeline-item fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-period">2026 – Present</span>
+                <span class="timeline-company"><i class="bi bi-building"></i> Freelance / Remote</span>
+              </div>
+              <h5>Python Django Developer</h5>
+              <p>Developing and maintaining web applications using Python and Django, collaborating with clients to deliver custom solutions that meet their needs.</p>
+                <span class="timeline-tag">Python</span>
+                <span class="timeline-tag">Django</span>
+                <span class="timeline-tag">PostgreSQL</span>
+                <span class="timeline-tag">REST API</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-period">2024</span>
+                <span class="timeline-company"><i class="bi bi-building"></i> NGO / Media Org</span>
+              </div>
+              <h5>Flutter Developer</h5>
+              <p>Developed cross-platform mobile applications using Flutter and Dart, collaborating with teams to deliver feature-rich solutions for various clients.</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Flutter</span>
+                <span class="timeline-tag">Dart</span>
+                <span class="timeline-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-badge mx-auto"><i class="bi bi-grid-3x3-gap"></i> Portfolio</div>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <p class="section-subtitle mx-auto text-center">A selection of work that demonstrates my range and capabilities.</p>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Dev</button>
+      <button class="filter-btn" data-filter="ui">UI / Bootstrap</button>
+      <button class="filter-btn" data-filter="form">Forms & Data</button>
+    </div>
+
+    <div class="row g-4" id="projectsGrid">
+
+      <!-- 1. Tecarch Sample Webpage -->
+      <div class="col-md-6 col-lg-4 project-item fade-up" data-category="web" style="transition:opacity 0.3s,transform 0.3s;">
+        <div class="project-card">
+          <div class="project-img-wrap" style="background:linear-gradient(135deg,#6c63ff 0%,#3d35cc 100%);">
+            <div class="project-img-placeholder"><i class="bi bi-globe2"></i></div>
+            <div class="project-overlay">
+              <a href="http://192.168.101.5:5501/index.html" target="_blank" class="project-overlay-btn" title="View Live"><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Web Development</div>
+            <div class="project-title">Tecarch Sample Webpage</div>
+            <p class="project-desc">A fully structured technology-themed website showcasing modern layout, navigation, and content sections built with HTML & CSS.</p>
+            <div class="project-tech">
+              <span class="project-tech-tag">HTML</span>
+              <span class="project-tech-tag">CSS</span>
+              <span class="project-tech-tag">JavaScript</span>
+            </div>
+            <a href="http://192.168.101.5:5501/index.html" target="_blank" class="blog-read-more mt-3">Live Preview <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Real Estate -->
+      <div class="col-md-6 col-lg-4 project-item fade-up" data-category="web" style="transition:opacity 0.3s,transform 0.3s;">
+        <div class="project-card">
+          <div class="project-img-wrap" style="background:linear-gradient(135deg,#00d4aa 0%,#007a5e 100%);">
+            <div class="project-img-placeholder"><i class="bi bi-house-door"></i></div>
+            <div class="project-overlay">
+              <a href="http://192.168.101.5:5502/estate.html" target="_blank" class="project-overlay-btn" title="View Live"><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Web Development</div>
+            <div class="project-title">Real Estate Website</div>
+            <p class="project-desc">A property listing and real estate platform with responsive design, property cards, search filters, and inquiry features.</p>
+            <div class="project-tech">
+              <span class="project-tech-tag">HTML</span>
+              <span class="project-tech-tag">CSS</span>
+              <span class="project-tech-tag">Bootstrap</span>
+            </div>
+            <a href="http://192.168.101.5:5502/estate.html" target="_blank" class="blog-read-more mt-3">Live Preview <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Marksheet -->
+      <div class="col-md-6 col-lg-4 project-item fade-up" data-category="form" style="transition:opacity 0.3s,transform 0.3s;">
+        <div class="project-card">
+          <div class="project-img-wrap" style="background:linear-gradient(135deg,#f093fb 0%,#8b5cf6 100%);">
+            <div class="project-img-placeholder"><i class="bi bi-file-earmark-bar-graph"></i></div>
+            <div class="project-overlay">
+              <a href="http://192.168.101.5:5502/marksheet.html" target="_blank" class="project-overlay-btn" title="View Live"><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Data & Forms</div>
+            <div class="project-title">Marksheet System</div>
+            <p class="project-desc">An interactive student marksheet generator with grade calculation, result summary, and printable report output.</p>
+            <div class="project-tech">
+              <span class="project-tech-tag">HTML</span>
+              <span class="project-tech-tag">CSS</span>
+              <span class="project-tech-tag">JavaScript</span>
+            </div>
+            <a href="http://192.168.101.5:5502/marksheet.html" target="_blank" class="blog-read-more mt-3">Live Preview <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Transport -->
+      <div class="col-md-6 col-lg-4 project-item fade-up" data-category="web" style="transition:opacity 0.3s,transform 0.3s;">
+        <div class="project-card">
+          <div class="project-img-wrap" style="background:linear-gradient(135deg,#ff6b6b 0%,#c0392b 100%);">
+            <div class="project-img-placeholder"><i class="bi bi-truck"></i></div>
+            <div class="project-overlay">
+              <a href="http://192.168.101.5:5502/hw.html" target="_blank" class="project-overlay-btn" title="View Live"><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Web Development</div>
+            <div class="project-title">Transport Website</div>
+            <p class="project-desc">A transport and logistics service website featuring route information, service details, and a responsive booking-style layout.</p>
+            <div class="project-tech">
+              <span class="project-tech-tag">HTML</span>
+              <span class="project-tech-tag">CSS</span>
+              <span class="project-tech-tag">Bootstrap</span>
+            </div>
+            <a href="http://192.168.101.5:5502/hw.html" target="_blank" class="blog-read-more mt-3">Live Preview <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Form Sample -->
+      <div class="col-md-6 col-lg-4 project-item fade-up" data-category="form" style="transition:opacity 0.3s,transform 0.3s;">
+        <div class="project-card">
+          <div class="project-img-wrap" style="background:linear-gradient(135deg,#4facfe 0%,#00b4d8 100%);">
+            <div class="project-img-placeholder"><i class="bi bi-ui-checks"></i></div>
+            <div class="project-overlay">
+              <a href="http://192.168.101.5:5502/forms.html" target="_blank" class="project-overlay-btn" title="View Live"><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Forms & UI</div>
+            <div class="project-title">Form Sample Collection</div>
+            <p class="project-desc">A comprehensive set of styled HTML form components including inputs, dropdowns, checkboxes, radio buttons, and validation patterns.</p>
+            <div class="project-tech">
+              <span class="project-tech-tag">HTML</span>
+              <span class="project-tech-tag">CSS</span>
+              <span class="project-tech-tag">Validation</span>
+            </div>
+            <a href="http://192.168.101.5:5502/forms.html" target="_blank" class="blog-read-more mt-3">Live Preview <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Bootstrap Title / UI -->
+      <div class="col-md-6 col-lg-4 project-item fade-up" data-category="ui" style="transition:opacity 0.3s,transform 0.3s;">
+        <div class="project-card">
+          <div class="project-img-wrap" style="background:linear-gradient(135deg,#7952b3 0%,#6c63ff 100%);">
+            <div class="project-img-placeholder"><i class="bi bi-bootstrap"></i></div>
+            <div class="project-overlay">
+              <a href="http://192.168.101.5:5501/bootstrap.html" target="_blank" class="project-overlay-btn" title="View Live"><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">UI / Bootstrap</div>
+            <div class="project-title">Bootstrap UI Showcase</div>
+            <p class="project-desc">A Bootstrap 5 component showcase and layout demonstration featuring grids, cards, navbars, modals, and responsive utilities.</p>
+            <div class="project-tech">
+              <span class="project-tech-tag">Bootstrap 5</span>
+              <span class="project-tech-tag">HTML</span>
+              <span class="project-tech-tag">CSS</span>
+            </div>
+            <a href="http://192.168.101.5:5501/bootstrap.html" target="_blank" class="blog-read-more mt-3">Live Preview <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section id="blog" class="section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-badge mx-auto"><i class="bi bi-journal-text"></i> Blog</div>
+      <h2 class="section-title">Latest <span>Insights</span></h2>
+      <p class="section-subtitle mx-auto text-center">Thoughts on design, development, and the digital world.</p>
+    </div>
+
+    <div class="filter-tabs mb-4">
+      <button class="blog-filter-btn filter-btn active" data-filter="all">All</button>
+      <button class="blog-filter-btn filter-btn" data-filter="tech">Technology</button>
+      <button class="blog-filter-btn filter-btn" data-filter="design">Design</button>
+      <button class="blog-filter-btn filter-btn" data-filter="career">Career</button>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 blog-item fade-up" data-category="tech">
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <div class="blog-img-placeholder">💻</div>
+            <span class="blog-category-tag">Technology</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Dec 15, 2024</span>
+              <span class="blog-meta-item"><i class="bi bi-clock"></i> 8 min read</span>
+            </div>
+            <h4 class="blog-title"><a href="#" data-blog-open="1">The Future of Web Development: Trends to Watch in 2025</a></h4>
+            <p class="blog-excerpt">From AI-powered tools to new frameworks, discover what's shaping the next generation of web experiences.</p>
+            <a href="#" class="blog-read-more" data-blog-open="1">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item fade-up" data-category="design">
+        <div class="blog-card">
+          <div class="blog-img-wrap" style="background:linear-gradient(135deg,#f093fb,#f5576c);">
+            <div class="blog-img-placeholder">🎨</div>
+            <span class="blog-category-tag">Design</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Nov 28, 2024</span>
+              <span class="blog-meta-item"><i class="bi bi-clock"></i> 6 min read</span>
+            </div>
+            <h4 class="blog-title"><a href="#" data-blog-open="2">Designing for Accessibility: A Practical Guide</a></h4>
+            <p class="blog-excerpt">Accessibility isn't optional — it's fundamental. Learn practical steps to make your designs inclusive for everyone.</p>
+            <a href="#" class="blog-read-more" data-blog-open="2">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item fade-up" data-category="career">
+        <div class="blog-card">
+          <div class="blog-img-wrap" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">
+            <div class="blog-img-placeholder">🚀</div>
+            <span class="blog-category-tag">Career</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-meta-item"><i class="bi bi-calendar3"></i> Oct 10, 2024</span>
+              <span class="blog-meta-item"><i class="bi bi-clock"></i> 5 min read</span>
+            </div>
+            <h4 class="blog-title"><a href="#" data-blog-open="3">How to Build a Portfolio That Gets You Hired</a></h4>
+            <p class="blog-excerpt">Your portfolio is your career's front door. Here's how to make it unforgettable and get the opportunities you deserve.</p>
+            <a href="#" class="blog-read-more" data-blog-open="3">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-badge mx-auto"><i class="bi bi-envelope"></i> Get In Touch</div>
+      <h2 class="section-title">Let's Work <span>Together</span></h2>
+      <p class="section-subtitle mx-auto text-center">Have a project in mind? I'd love to hear about it. Let's create something great.</p>
+    </div>
+
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5 fade-left">
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">smarikathapa@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">Pokhara, Nepal</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
+          <div>
+            <div class="contact-info-label">LinkedIn</div>
+            <div class="contact-info-value"><a href="https://www.linkedin.com/in/smarika-thapa-970966319/" target="_blank" style="color:var(--clr-accent);">smarika-thapa-970966319</a></div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="bi bi-twitter-x"></i></div>
+          <div>
+            <div class="contact-info-label">Twitter / X</div>
+            <div class="contact-info-value"><a href="https://x.com/taelisa0397" target="_blank" style="color:var(--clr-accent);">@taelisa0397</a></div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <p style="font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:0.75rem;">Connect on social media:</p>
+          <div class="header-social-links">
+            <a href="https://x.com/taelisa0397" target="_blank" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/smarika.thapa.magar.391178/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/s_marika712/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/smarika-thapa-970966319/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 fade-right">
+        <div class="contact-form-wrap">
+          <form id="contactForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" class="form-control-custom" placeholder="Your name" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-control-custom" placeholder="your@email.com" required />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Subject</label>
+                  <input type="text" class="form-control-custom" placeholder="Project inquiry, collaboration..." />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Service Needed</label>
+                  <select class="form-control-custom">
+                    <option value="">Select a service...</option>
+                    <option>Web Development</option>
+                    <option>UI/UX Design</option>
+                    <option>Digital Marketing</option>
+                    <option>Content Creation</option>
+                    <option>Brand Strategy</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Message *</label>
+                  <textarea class="form-control-custom" placeholder="Tell me about your project..." required></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-primary-custom w-100 justify-content-center">
+                  <i class="bi bi-send"></i> Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+          <div id="formSuccess" style="display:none;text-align:center;padding:3rem 1rem;">
+            <div style="font-size:3.5rem;margin-bottom:1rem;">✅</div>
+            <h4 style="margin-bottom:0.5rem;">Message Sent!</h4>
+            <p style="color:var(--clr-text-muted);">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-logo">S.Thapa</div>
+        <p class="footer-desc">Creative professional passionate about building meaningful digital experiences that connect, inspire, and deliver results.</p>
+        <div class="footer-social">
+          <a href="https://x.com/taelisa0397" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.facebook.com/smarika.thapa.magar.391178/" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/s_marika712/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/smarika-thapa-970966319/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-6">
+        <div class="footer-heading">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-6">
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links">
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="pages/cv.html">CV / Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">UI/UX Design</a></li>
+          <li><a href="#services">Digital Marketing</a></li>
+          <li><a href="#services">Content Creation</a></li>
+          <li><a href="#services">Brand Strategy</a></li>
+        </ul>
       </div>
     </div>
 
-  </footer>
+    <div class="footer-bottom">
+      <div class="footer-copyright">© 2024 <span>Smarika Thapa</span>. All rights reserved.</div>
+      <div class="footer-copyright">Built with <span>❤️</span> in Kathmandu, Nepal</div>
+    </div>
+  </div>
+</footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- ===== BLOG MODAL ===== -->
+<div id="blogModalOverlay" class="blog-modal-overlay" role="dialog" aria-modal="true" aria-label="Blog post">
+  <div class="blog-modal-wrap">
+    <div id="blogModal" class="blog-modal-content">
+      <button id="blogModalClose" class="blog-modal-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="blog-modal-header-img" style="display:flex;align-items:center;justify-content:center;font-size:5rem;color:rgba(255,255,255,0.3);"></div>
+      <div class="blog-modal-body">
+        <div class="blog-modal-category"></div>
+        <h2 class="blog-modal-title"></h2>
+        <div class="blog-modal-meta">
+          <span class="blog-meta-item"><i class="bi bi-calendar3 me-1"></i><span class="blog-modal-date"></span></span>
+          <span class="blog-meta-item"><i class="bi bi-clock me-1"></i><span class="blog-modal-readtime"></span></span>
+          <span class="blog-meta-item"><i class="bi bi-person me-1"></i><span class="blog-modal-author"></span></span>
+        </div>
+        <div class="blog-modal-content-text"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- ===== SCROLL TO TOP ===== -->
+<button class="scroll-top" aria-label="Scroll to top">
+  <i class="bi bi-chevron-up"></i>
+</button>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Counter Init -->
+<script>
+  // Init counters on hero stats too
+  document.querySelectorAll('.hero-stat-number[data-target]').forEach(el => {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const t = parseInt(el.dataset.target), s = el.dataset.suffix||'';
+          let c=0; const inc=t/112;
+          const iv = setInterval(()=>{c=Math.min(c+inc,t);el.textContent=Math.round(c)+s;if(c>=t)clearInterval(iv);},16);
+          io.unobserve(el);
+        }
+      });
+    },{threshold:0.5});
+    io.observe(el);
+  });
+</script>
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>
