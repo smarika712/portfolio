@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Smarika Thapa, B.Sc. CSIT student interested in Python, Django, and web development.">
+  <title>{{ name }} | Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="{% static 'pages/style.css' %}" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top site-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">{{ name }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMenu" aria-controls="navMenu"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 order-2 order-lg-1 text-center text-lg-start">
+            <p class="greeting mb-1">Hi, I'm</p>
+            <h1 class="display-4 fw-bold mb-2">{{ name }}</h1>
+            <h2 class="h4 accent-text mb-4">B.Sc. CSIT Student</h2>
+            <p class="lead text-muted mb-4">
+              I'm a computer science student interested in Python, Django, and web development.
+              I enjoy learning new technologies and building practical projects.
+            </p>
+            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-4">
+              <a href="#projects" class="btn btn-accent btn-lg">View My Projects</a>
+              <a href="#contact" class="btn btn-outline-accent btn-lg">Contact Me</a>
+            </div>
+            <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+              <a href="{{ github_url }}" target="_blank" rel="noopener noreferrer"
+                 class="social-icon" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+              <a href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer"
+                 class="social-icon" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 d-flex justify-content-center">
+            <div class="photo-wrap">
+              <img src="{% static 'pages/images/profile.jpg' %}" alt="Portrait of {{ name }}"
+                   class="profile-photo"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="photo-placeholder" aria-hidden="true">ST</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2 class="section-title">About Me</h2>
+        <p class="text-muted fs-5">
+          I'm a B.Sc. CSIT student at Prithvi Narayan Campus in Pokhara, Nepal. I'm currently
+          developing my programming and web development skills, mainly with Python and Django.
+        </p>
+        <p class="text-muted fs-5">
+          I like learning by building, so I work on small projects to practice what I study,
+          including databases, front-end basics, and using Git to manage my code. I'm still
+          growing as a developer, and I'm always looking for new things to learn.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt">
+      <div class="container narrow text-center">
+        <h2 class="section-title">Skills</h2>
+        <p class="text-muted mb-4">Technologies I use or am learning.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          {% for skill in skills %}
+            <span class="skill-badge">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title text-center">Projects</h2>
+        <div class="row g-4 justify-content-center">
+          {% for project in projects %}
+          <div class="col-md-6 col-lg-5">
+            <article class="card project-card h-100">
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="h4 fw-bold">{{ project.title }}</h3>
+                <p class="text-muted">{{ project.description }}</p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  {% for tech in project.tech %}
+                    <span class="tech-tag">{{ tech }}</span>
+                  {% endfor %}
+                </div>
+                {% if project.github_url %}
+                <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-outline-accent mt-auto align-self-start">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+                {% endif %}
+              </div>
+            </article>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section section-alt">
+      <div class="container narrow">
+        <h2 class="section-title text-center">Education</h2>
+        <div class="card edu-card">
+          <div class="card-body p-4 d-flex gap-3 align-items-start">
+            <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div>
+              <h3 class="h5 fw-bold mb-1">B.Sc. CSIT</h3>
+              <p class="mb-1">Prithvi Narayan Campus</p>
+              <p class="text-muted mb-2"><i class="bi bi-geo-alt me-1"></i>Pokhara, Nepal</p>
+              <span class="tech-tag">Currently in Sixth Semester</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container narrow text-center">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="text-muted mb-5">
+          I'm always interested in learning, building projects, and connecting with people in technology.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <a href="{{ github_url }}" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <i class="bi bi-github"></i>
+              <h3 class="h5 fw-bold">GitHub</h3>
+              <p class="mb-0">Explore my projects and code.</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <i class="bi bi-linkedin"></i>
+              <h3 class="h5 fw-bold">LinkedIn</h3>
+              <p class="mb-0">Connect with me professionally.</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="mailto:{{ email }}" class="contact-card">
+              <i class="bi bi-envelope-fill"></i>
+              <h3 class="h5 fw-bold">Email Me</h3>
+              <p class="mb-0 email-text">{{ email }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="text-center text-md-start">
+        <div>&copy; 2026 {{ name }}</div>
+        <small>Built with Django and Bootstrap</small>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="{{ github_url }}" target="_blank" rel="noopener noreferrer"
+           class="social-icon small-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer"
+           class="social-icon small-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:{{ email }}" class="social-icon small-icon" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'pages/script.js' %}"></script>
+</body>
+</html>
